@@ -33,8 +33,36 @@ while(true) {
 
 let porcentagemNulos = (nulos/contador)*100;
 let porcentagemBrancos = (brancos/contador)*100;
-console.log('A candidata Claudia rodrigues teve: ' + candidatoClaudia + ' votos');
+console.log('A candidata Claudia Rodrigues teve: ' + candidatoClaudia + ' votos');
 console.log('O candidato Carlos Luz teve: ' + candidatoCarlos + ' votos')
 console.log('O candidato Neves Rocha teve: ' + candidatoNeves + ' votos');
 console.log('A porcentagem de votos nulos é: ' + porcentagemNulos +'%');
-console.log('A porcentagem de votos nulos é: ' + porcentagemBrancos +'%');
+console.log('A porcentagem de votos brancos é: ' + porcentagemBrancos +'%');
+
+if(candidatoClaudia > candidatoCarlos && candidatoClaudia > candidatoNeves) {
+    console.log(`A candidata Claudia Rodrigues foi a vencedora`);
+}
+if( candidatoNeves > candidatoClaudia && candidatoNeves > candidatoCarlos) {
+    console.log(`O candidato Neves Rocha foi o vencedor`);
+}
+if (candidatoCarlos > candidatoClaudia && candidatoCarlos > candidatoNeves) {
+    console.log('O candidato Carlos Luz foi o vencedor');
+}
+if (brancos > nulos && brancos > candidatoCarlos && brancos > candidatoClaudia && brancos > candidatoNeves) {
+    console.log('O maior número de votos é branco');
+}
+if (nulos > brancos && nulos > candidatoCarlos && nulos > candidatoClaudia && nulos > candidatoNeves) {
+    console.log('O maior número de votos é nulo');
+}
+if (candidatoCarlos === candidatoClaudia && candidatoNeves === candidatoCarlos) {
+    console.log('Todos candidatos empataram');
+}
+if (candidatoCarlos === candidatoClaudia && candidatoCarlos > candidatoNeves) {
+    console.log('Os candidatos Carlos Luz e Claudia Rodrigues empataram');
+}
+if (candidatoNeves === candidatoClaudia && candidatoNeves > candidatoCarlos) {
+    console.log('Os candidatos Neves Rocha e Claudia Rodrigues empataram');
+}
+if (candidatoNeves === candidatoCarlos && candidatoNeves > candidatoClaudia) {
+    console.log('Os candidatos Carlos Luz e Neves Rocha empataram');
+}

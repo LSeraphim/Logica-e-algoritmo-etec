@@ -1,4 +1,5 @@
 let total = null;
+const resposta = document.querySelector('.resposta');
 while(true) {
     pedido = parseInt(prompt('Digite o código do produto que deseja(Digite 0 para encerrar)'));
     if (pedido === 100) {
@@ -26,3 +27,4 @@ while(true) {
 }
 
 console.log('O valor total ficou: ' + total+'R$');
+document.querySelector('.resposta').innerHTML = `<p>O valor total será ${total}R$</p>`;
